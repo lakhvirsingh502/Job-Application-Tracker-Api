@@ -21,6 +21,9 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install -r requirements.txt
-          pip install pytest
+          pip install python -m pytest
       - name: Run tests
         run: pytest
+  env:
+      Database_Url: postgresql://postgres:postgres@localhost:5433/jobtracker
+      SECRET_KEY: ${{ secrets.SECRET_KEY }}
