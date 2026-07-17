@@ -8,7 +8,13 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    steps:
+    
+        
+  env:
+      Database_Url: postgresql://postgres:postgres@localhost:5433/jobtracker
+      SECRET_KEY: ${{ secrets.SECRET_KEY }}
+  
+  steps:
       - name: Get code from repository
         uses: actions/checkout@v4
 
@@ -23,7 +29,3 @@ jobs:
           pip install -r requirements.txt
           pip install pytest
       - name: Run python -m pytest
-        
-  env:
-      Database_Url: postgresql://postgres:postgres@localhost:5433/jobtracker
-      SECRET_KEY: ${{ secrets.SECRET_KEY }}
