@@ -8,12 +8,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    
-        
+
+
   env:
       Database_Url: postgresql://postgres:postgres@localhost:5433/jobtracker
       SECRET_KEY: ${{ secrets.SECRET_KEY }}
-  
+
   steps:
       - name: Get code from repository
         uses: actions/checkout@v4
