@@ -8,24 +8,22 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-
-
   env:
       Database_Url: postgresql://postgres:postgres@localhost:5433/jobtracker
       SECRET_KEY: ${{ secrets.SECRET_KEY }}
 
   steps:
-      - name: Get code from repository
-        uses: actions/checkout@v4
+    - name: Get code from repository
+      uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.11"
 
-      - name: Install dependencies
-        run: |
-          pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install pytest
-      - name: Run python -m pytest
+    - name: Install dependencies
+      run: |
+        pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pytest
+    - name: Run python -m pytest
