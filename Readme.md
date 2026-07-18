@@ -18,6 +18,7 @@ This project is designed as a professional backend portfolio project using authe
 * pytest
 * Docker
 * Docker Compose
+* httpx
 
 ---
 
