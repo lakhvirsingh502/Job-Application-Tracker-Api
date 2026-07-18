@@ -15,7 +15,7 @@ This project is designed as a professional backend portfolio project using authe
 * Alembic
 * JWT Authentication
 * Password Hashing
-* Pytest
+* pytest
 * Docker
 * Docker Compose
 
