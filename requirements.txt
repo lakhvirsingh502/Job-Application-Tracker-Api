@@ -7,3 +7,4 @@ python-dotenv
 pydantic
 alembic
 psycopg2-binary
+pytest
