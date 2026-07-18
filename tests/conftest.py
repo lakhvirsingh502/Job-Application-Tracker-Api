@@ -12,7 +12,7 @@ from app.database import Base
 
 load_dotenv()
 
-Database_url = os.getenv("Database_Url")
+Database_url = os.getenv("Test_Database_Url")
 engine = create_engine(Database_url)
 TestingSessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
 
